@@ -1,0 +1,14 @@
+block content
+	h1.
+		#{title}
+	form#formAddblog(name='addblog',method='post',action='/blogs')
+		p Title:
+			input#inputTitle(type='text', placeholder="Blog Title Goes Here", name='title')
+		p Body:
+			input#inputBodyText(type='text', placeholder="Type Blog Text Here", name='bodyText')
+		p Author:
+			input#inputAuthor(type='text', name='author')
+		p Date:
+			input#inputDate(type='date', name='date')
+		p
+			button#btnSubmit(type='submit') submit

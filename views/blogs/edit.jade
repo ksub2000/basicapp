@@ -1,0 +1,17 @@
+block content
+	h1.
+		blog ID #{blog._id}
+	form(action='/blogs/#{blog._id}/edit',method='post',name='updateblog')
+		p Title:
+			input#inputTitle(type='text', value='#{blog.title}', name='title')
+		p Body Text:
+			input#inputBody(type='text', value='#{blog.bodyText}', name='bodyText')
+		p Author:
+			input#inputAuthor(type='text', value='#{blog.author}', name='author')
+		p Date:
+			input#inputDate(type='date', name='date')
+		p
+			input(type='hidden',value='PUT',name='_method')
+		p
+			button#btnSubmit(type='submit').
+				Update

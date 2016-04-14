@@ -1,0 +1,19 @@
+block content
+    h1.
+         #{title}
+    ul
+        - each blog, i in blogs
+            li
+                = blog.title
+                = blog.bodyText
+                = blog.author
+                = blog.date
+                = blog._id
+                form(action='/blogs/#{blog._id}/edit',method='post')
+                    input(type='hidden',value='DELETE',name='_method')
+                    button(type='submit').
+                        Delete
+                p
+                    a(href='/blogs/#{blog._id}/edit') Edit
+                p
+                    a(href='/blogs/#{blog._id}') Show
