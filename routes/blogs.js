@@ -61,9 +61,9 @@ router.route('/')
         });
     });
 
-router.get('/newpost', function(req, res) {
+router.get('/new', function(req, res) {
 
-       res.render('blogs/newpost', { title: 'New Post:' });
+       res.render('blogs/new', { title: 'New Post:' });
 
 });
 
