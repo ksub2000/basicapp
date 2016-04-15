@@ -11,10 +11,6 @@ var users = require('./routes/users');
 var app = express();
 
 
-// basic included libraries
-var fs = require('fs');
-var readline = require('readline');
-
 //stuff I've added/built
 var db = require('./model/db');
 var blog = require('./model/blogs');

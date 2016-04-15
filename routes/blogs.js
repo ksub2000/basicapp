@@ -61,6 +61,12 @@ router.route('/')
         });
     });
 
+router.get('/newpost', function(req, res) {
+
+       res.render('blogs/newpost', { title: 'New Post:' });
+
+});
+
 // Here is the GET function to read a post
 router.route('/:id')
       .get(function(req, res) {
